@@ -3,9 +3,7 @@ import {
   BrowserRouter as Router
 } from "react-router-dom";
 import { Container, Nav, Navbar } from 'react-bootstrap';
-import logo from '../../assets/img/logo.svg';
 import navIcon1 from '../../assets/img/nav-icon1.svg';
-import navIcon2 from '../../assets/img/nav-icon2.svg';
 import navIcon3 from '../../assets/img/nav-icon3.svg';
 
 const NavBar: React.FC = () => {
@@ -35,7 +33,7 @@ const NavBar: React.FC = () => {
       <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
         <Container>
           <Navbar.Brand href="/">
-            <img src={logo} alt="Logo" />
+            {/* <img src={logo} alt="Logo" /> */}
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="navbar-toggler-icon"></span>
@@ -47,14 +45,14 @@ const NavBar: React.FC = () => {
                 className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'}
                 onClick={() => onUpdateActiveLink('home')}
               >
-                Home
+                Inicio
               </Nav.Link>
               <Nav.Link
                 href="#skills"
                 className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'}
                 onClick={() => onUpdateActiveLink('skills')}
               >
-                Skills
+                Tecnologías
               </Nav.Link>
               <Nav.Link
                 href="#projects"
@@ -66,9 +64,8 @@ const NavBar: React.FC = () => {
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
-                <a href="#"><img src={navIcon1} alt="navIcon1" /></a>
-                <a href="#"><img src={navIcon2} alt="navIcon2" /></a>
-                <a href="#"><img src={navIcon3} alt="navIcon3" /></a>
+                <a href="https://www.linkedin.com/in/miryan-orellana/" target="_blank"><img src={navIcon1} alt="linkedin" /></a>
+                <a href="https://github.com/devParadise98" target="_blank"><img src={navIcon3} alt="github" /></a>
               </div>
             </span>
           </Navbar.Collapse>
